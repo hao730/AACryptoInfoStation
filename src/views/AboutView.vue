@@ -1,8 +1,19 @@
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+import { useCounterStore } from '@/stores/counter';
+import { storeToRefs } from 'pinia';
+const {t,locale} = useI18n();
+const store = useCounterStore();
+const {count ,doubleCount} = storeToRefs(store);
+const {increment} = store;
+
+</script>
+
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
-    
-    {{ $t('title') }}
+    {{ count }}
+    {{ doubleCount }}
+    <el-button type="primary" @click="increment()">{{$t('addCount')}}</el-button>
   </div>
 </template>
 
