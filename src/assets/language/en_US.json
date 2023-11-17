@@ -2,5 +2,7 @@
     "title": "MIS footmark",
     "description": "IT learn",
     "addCount":"Add Count",
-    "multiply Count":"Multiply Count"
+    "multiply Count":"Multiply Count",
+    "change":"change",
+    "reset":"reset"
 }   
