@@ -4,8 +4,10 @@ import { useCounterStore } from '@/stores/counter';
 import { storeToRefs } from 'pinia';
 const {t,locale} = useI18n();
 const store = useCounterStore();
+//可直接使用store或使用以下拆解使用
 const {count ,doubleCount} = storeToRefs(store);
-const {increment} = store;
+const {increment,multiply} = store;
+
 
 </script>
 
@@ -13,7 +15,9 @@ const {increment} = store;
   <div class="about">
     {{ count }}
     {{ doubleCount }}
-    <el-button type="primary" @click="increment()">{{$t('addCount')}}</el-button>
+    <el-button type="primary" @click="increment()">{{t('addCount')}}</el-button>
+    <el-button type="primary" @click="multiply()">{{t('multiplyCount')}}</el-button>
+
   </div>
 </template>
 
