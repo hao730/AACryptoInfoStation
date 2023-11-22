@@ -68,3 +68,18 @@ docker exec -it vite_docker sh
 ```sh
 npm i && npm run dev
 ```
+
+## 將程式上傳至Docker Hub
+
+### 將程式鏡像且更改名稱及Tag
+
+```sh
+docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]
+docker commit 277e80820516 hao730/vuedocker:1.0.0
+```
+### docker push 镜像到docker hub
+
+```sh
+docker push<hub-user>/<repo-name>:<tag>
+docker push hao730/vuedocker:1.0.0
+```
