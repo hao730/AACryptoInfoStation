@@ -19,11 +19,6 @@ export const useCounterStore = defineStore('counter', {
     multiply(){
       this.counter = this.counter * this.counter;
       console.log("multiply.count:",this.counter);
-    },
-    /*$reset(){
-      this.counter = 0;
-      console.log("reset.count:",this.counter);
-
-    }*/
+    }
   },
 })

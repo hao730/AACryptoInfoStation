@@ -11,8 +11,8 @@ const {increment, multiply } = counterStore;
 //強制將state改變
 const changeStore = () =>{
   counterStore.$state = { 
-    counter: 666,
-    amount: 999
+    counter: 0,
+    amount: 0,
   }
 }
 </script>
